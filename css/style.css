@@ -401,6 +401,29 @@ p { margin: 0; }
 /* ============================================================
    EVENT DETAILS CARD
    ============================================================ */
+#details::before{
+  content: "";
+  position: absolute;
+  inset: 0;           /* Spans across the entire parent element */
+  z-index: -1; 
+  background: url(../assets/gallery/photo-5.jpg) center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  opacity: 0.4;
+}
+
+#details {
+  & .section-title {
+  color: var(--azure-light);
+  text-shadow:0px 0px 10px var(--azure-deep) ;
+}
+  & .section-eyebrow {
+    color: #fff;
+  } 
+}
+
 .details-card {
   border: 1.5px solid var(--hairline);
   border-radius: var(--radius);
