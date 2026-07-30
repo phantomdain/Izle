@@ -593,6 +593,8 @@ p { margin: 0; }
   margin-bottom: var(--space-3);
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  justify-content: center;
 }
 .honor-tabs::-webkit-scrollbar { display: none; }
 .honor-tabs button {
