@@ -602,7 +602,6 @@ p { margin: 0; }
    ============================================================ */
 .honor-tabs {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--space-1);
   overflow-x: auto;
   padding-bottom: var(--space-1);
@@ -611,6 +610,7 @@ p { margin: 0; }
   scrollbar-width: none;
 
   justify-content: center;
+  flex-wrap: wrap;
 }
 .honor-tabs::-webkit-scrollbar { display: none; }
 .honor-tabs button {
