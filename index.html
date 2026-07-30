@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-bind="event.debutanteName" data-bind-suffix="'s 18th Birthday Celebration">Debutante's Name's 18th Birthday Celebration</title>
+<meta name="description" content="Join us as we celebrate this milestone birthday — RSVP and find your table inside.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a9bc4'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ffcb3d'/%3E%3Cpath d='M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2.1 2.1M22.4 22.4l2.1 2.1M7.5 24.5l2.1-2.1M22.4 9.6l2.1-2.1' stroke='%23d81a72' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <a href="#hero" class="site-header__mark">18</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+</header>
+<nav class="site-nav" id="siteNav">
+  <button class="site-nav__close" id="navClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a href="#details" class="nav-link">Details</a>
+  <a href="#timeline" class="nav-link">Timeline</a>
+  <a href="#attire" class="nav-link">Attire</a>
+  <a href="#gallery" class="nav-link">Gallery</a>
+  <a href="#faq" class="nav-link">FAQ</a>
+  <a href="#rsvp" class="nav-link">RSVP</a>
+  <a href="table.html" class="nav-link">Find My Table</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__portrait" id="heroPortrait">
+      <img src="assets/hero-photo.jpg" alt="" class="hero__portrait-img" id="heroPortraitImg">
+      <div class="hero__portrait-fallback" id="heroPortraitFallback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </div>
+    </div>
+    <span class="hero__eyebrow" data-bind="event.eyebrow">A Sun-Kissed Celebration</span>
+    <h1 class="hero__title">Celebrating<br><em data-bind="event.debutanteName">Debutante's Name</em>'s 18th</h1>
+    <p class="hero__date" data-bind="event.dateDisplayLong">Loading date…</p>
+    <div class="hero__cta">
+      <a href="#rsvp" class="btn btn--primary">RSVP</a>
+      <a href="table.html" class="btn btn--outline">Find My Table</a>
+    </div>
+    <div class="hero__scroll"></div>
+  </section>
+
+  <!-- INVITATION MESSAGE -->
+  <section class="section reveal">
+    <div class="container text-center">
+      <span class="section-eyebrow">You Are Invited</span>
+      <h2 class="section-title">Mark Your Calendars</h2>
+      <p class="section-lede mx-auto">
+        Join me for an enchanting evening filled with joy and warmth as I celebrate the
+        beginning of a new chapter in my life. Come enjoy an unforgettable night of music,
+        dancing, delightful cuisine, and wonderful company — your presence will be the
+        highlight of this special occasion.
+      </p>
+      <div class="divider">
+        <svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 16c4-8 8-8 12 0s8 8 12 0 8-8 12 0 8 8 10 4"/></svg>
+      </div>
+      <p class="section-lede mx-auto" style="margin: 0 auto;">
+        Please RSVP by <strong data-bind="event.rsvpDeadlineDisplay">[RSVP Deadline]</strong> so a place can be reserved for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section class="section section--alt reveal" id="details">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-4);">
+        <span class="section-eyebrow">When &amp; Where</span>
+        <h2 class="section-title">Event Details</h2>
+      </div>
+
+      <div class="details-card">
+        <div class="countdown" id="countdown">
+          <div class="countdown__item"><span class="countdown__num" id="cdDays">00</span><span class="countdown__label">Days</span></div>
+          <div class="countdown__item"><span class="countdown__num" id="cdHours">00</span><span class="countdown__label">Hours</span></div>
+          <div class="countdown__item"><span class="countdown__num" id="cdMinutes">00</span><span class="countdown__label">Mins</span></div>
+          <div class="countdown__item"><span class="countdown__num" id="cdSeconds">00</span><span class="countdown__label">Secs</span></div>
+        </div>
+
+        <div class="divider" style="margin-top: var(--space-4);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+
+        <div class="details-card__row">
+          <span class="details-card__label">Date &amp; Time</span>
+          <span class="details-card__value" data-bind="event.dateTimeDisplay">Loading…</span>
+        </div>
+        <div class="details-card__row">
+          <span class="details-card__label">Venue</span>
+          <span class="details-card__value" data-bind="event.venueName">Venue Name</span>
+          <span style="color: var(--ink-dim); font-size: 0.9rem;" data-bind="event.venueAddress">123 Anywhere Street</span>
+        </div>
+
+        <div class="details-card__actions">
+          <a href="#" class="btn btn--outline" id="mapsLink" target="_blank" rel="noopener">Get Directions</a>
+          <a href="#" class="btn btn--outline" id="calendarLink" target="_blank" rel="noopener">Add to Calendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE FROM THE DEBUTANTE -->
+  <section class="section reveal">
+    <div class="container message text-center">
+      <span class="section-eyebrow">A Little Note</span>
+      <h2 class="section-title">From Me, To You</h2>
+      <div class="message__body" style="text-align: left;">
+        <p>
+          Approaching my 18th birthday fills me with a blend of anticipation and reflection —
+          it marks not just a milestone, but a culmination of cherished memories and the promise
+          of dreams yet to unfold.
+        </p>
+        <p>
+          I extend an invitation to you to join me in honoring this momentous occasion, as I
+          embark on a new chapter of my journey, brimming with hope, inspiration, and endless
+          possibility.
+        </p>
+      </div>
+      <p class="message__signature" data-bind="event.debutanteName">Debutante's Name</p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section section--alt reveal" id="timeline">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-4);">
+        <span class="section-eyebrow">The Program</span>
+        <h2 class="section-title">Timeline</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__time">5:00 PM</span>
+          <span class="timeline__label">Cocktails &amp; Dinner</span>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__time">7:00 PM</span>
+          <span class="timeline__label">Speeches &amp; Program</span>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__time">8:30 PM</span>
+          <span class="timeline__label">Party &amp; Dance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTIRE -->
+  <section class="section reveal" id="attire">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-4);">
+        <span class="section-eyebrow">Dress Code</span>
+        <h2 class="section-title">Attire Guide</h2>
+      </div>
+      <div class="attire-grid">
+        <div class="attire-card">
+          <h3>Ladies</h3>
+          <p>A breezy dress or skirt ensemble in azure, magenta, or sunny yellow tones. Sandals or espadrilles, with light, playful accessories.</p>
+        </div>
+        <div class="attire-card">
+          <h3>Gents</h3>
+          <p>A linen shirt and light trousers, or a summer suit in a soft blue or white. Loafers or boat shoes, kept crisp and relaxed.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: var(--space-3);">
+        <p class="section-eyebrow" style="margin-bottom: var(--space-1);">The Colors</p>
+        <div class="palette-swatches" style="justify-content: center;">
+          <span style="background:#2a9bc4;"></span>
+          <span style="background:#d81a72;"></span>
+          <span style="background:#ffcb3d;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT NOTE -->
+  <section class="section section--alt reveal">
+    <div class="container text-center">
+      <span class="section-eyebrow">A Note on Gifts</span>
+      <h2 class="section-title">Thank You, Kindly</h2>
+      <p class="section-lede mx-auto">
+        Your presence at my debut is the greatest gift I could ask for. If you'd like to
+        contribute further to the celebration, details are below — but your presence alone
+        is truly appreciated.
+      </p>
+      <div class="gift-actions">
+        <a href="#" class="btn btn--outline">Gift Registry</a>
+        <a href="#" class="btn btn--outline">Monetary Gift</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section reveal" id="gallery">
+    <div class="container container--wide">
+      <div class="text-center" style="margin-bottom: var(--space-4);">
+        <span class="section-eyebrow">Memories</span>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-grid__item">assets/gallery/photo-1.jpg</div>
+        <div class="gallery-grid__item">assets/gallery/photo-2.jpg</div>
+        <div class="gallery-grid__item">assets/gallery/photo-3.jpg</div>
+        <div class="gallery-grid__item">assets/gallery/photo-4.jpg</div>
+        <div class="gallery-grid__item">assets/gallery/photo-5.jpg</div>
+        <div class="gallery-grid__item">assets/gallery/photo-6.jpg</div>
+      </div>
+      <p class="finder-note text-center" style="margin-top: var(--space-2);">Drop your photos into <code>assets/gallery/</code> and replace each placeholder <code>&lt;div&gt;</code> with an <code>&lt;img&gt;</code> tag — see README.md.</p>
+    </div>
+  </section>
+
+  <!-- 18 ROSES / CANDLES / TREASURES / GIFTS -->
+  <section class="section section--alt reveal">
+    <div class="container container--wide">
+      <div class="text-center" style="margin-bottom: var(--space-4);">
+        <span class="section-eyebrow">With Gratitude</span>
+        <h2 class="section-title">My Eighteen</h2>
+      </div>
+      <div class="honor-tabs" id="honorTabs" role="tablist">
+        <button class="is-active" data-target="roses" type="button">18 Roses</button>
+        <button data-target="candles" type="button">18 Candles</button>
+        <button data-target="treasures" type="button">18 Treasures</button>
+        <button data-target="gifts" type="button">18 Gifts</button>
+      </div>
+      <div class="honor-panel is-active" data-panel="roses">
+        <ul class="honor-list">
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+        </ul>
+      </div>
+      <div class="honor-panel" data-panel="candles">
+        <ul class="honor-list">
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+        </ul>
+      </div>
+      <div class="honor-panel" data-panel="treasures">
+        <ul class="honor-list">
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+        </ul>
+      </div>
+      <div class="honor-panel" data-panel="gifts">
+        <ul class="honor-list">
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+          <li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li><li>Full Name</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section reveal" id="faq">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-4);">
+        <span class="section-eyebrow">Good to Know</span>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+
+      <details class="faq-item">
+        <summary>When and where is the debut taking place?</summary>
+        <p>The celebration will be held on <span data-bind="event.dateDisplayLong">[date]</span> at <span data-bind="event.venueName">[venue]</span>, located at <span data-bind="event.venueAddress">[address]</span>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the dress code?</summary>
+        <p>Bright and breezy, in keeping with our azure, magenta &amp; yellow theme. See the Attire Guide above for details.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I bring a plus one?</summary>
+        <p>Please indicate any additional guests when you RSVP so we can plan accordingly.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is transportation provided?</summary>
+        <p>For guests staying off-site, please arrange transportation via Grab, taxi, or a local car service.</p>
+      </details>
+      <details class="faq-item">
+        <summary>When is the RSVP deadline?</summary>
+        <p>Please RSVP by <span data-bind="event.rsvpDeadlineDisplay">[date]</span> so we can get an accurate headcount.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section section--alt reveal" id="rsvp">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2);">
+        <span class="section-eyebrow">Kindly Respond</span>
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-lede mx-auto">We'd love to see you there — please respond by <strong data-bind="event.rsvpDeadlineDisplay">[RSVP Deadline]</strong>.</p>
+      </div>
+
+      <form class="rsvp-form" id="rsvpForm" novalidate>
+        <div class="field honeypot-field" aria-hidden="true">
+          <label for="companyWebsite">Do not fill this out</label>
+          <input type="text" id="companyWebsite" name="companyWebsite" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="guestName">Full Name</label>
+          <input type="text" id="guestName" name="guestName" required autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label>Will you be attending?</label>
+          <div class="attend-toggle">
+            <input type="radio" id="attendYes" name="attending" value="yes" required>
+            <label for="attendYes">Joyfully Accepts</label>
+            <input type="radio" id="attendNo" name="attending" value="no" required>
+            <label for="attendNo">Regretfully Declines</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="guestCount">Number of Guests (including you)</label>
+          <select id="guestCount" name="guestCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="guestMessage">Message (optional)</label>
+          <textarea id="guestMessage" name="guestMessage" placeholder="Leave a well-wish…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block" id="rsvpSubmit">Send RSVP</button>
+        <div class="rsvp-status" id="rsvpStatus" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- TABLE FINDER TEASER -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="table-teaser">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h2 class="section-title" style="font-size: 1.7rem;">Already RSVP'd?</h2>
+        <p class="section-lede mx-auto" style="margin: 0 auto var(--space-3);">Find your assigned seat for the evening.</p>
+        <a href="table.html" class="btn btn--primary">Find My Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNAP & SHARE -->
+  <section class="section section--alt reveal">
+    <div class="container text-center">
+      <span class="section-eyebrow">Snap &amp; Share</span>
+      <p class="site-footer__hashtag">#<span data-bind="event.hashtag">YourHashtagAt18</span></p>
+      <p class="section-lede mx-auto">Capture the memories and share them with us using the hashtag above.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="site-footer__meta">
+    With love, <span data-bind="event.debutanteName">Debutante's Name</span> · <span id="footerYear"></span>
+  </p>
+</footer>
+
+<script src="js/config.js?v=1"></script>
+<script src="js/main.js?v=1"></script>
+<script src="js/rsvp.js?v=1"></script>
+</body>
+</html>
