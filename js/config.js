@@ -64,7 +64,7 @@ window.CONFIG = {
   // the link below. See README.md "Setting up Find My Table".
   // ------------------------------------------------------------
   googleSheet: {
-    csvUrl: "",
+    csvUrl: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQngjK-me-VtCRc0wDV4U173sC3k21791REt5n3Yo_TofW58BodiA40uL4Y0Y95P8eI5CccT78rgPr-/pub?gid=0&single=true&output=csv",
     guestNameColumn: "Guest Name",
     tableColumn: "Table Number",
   },
