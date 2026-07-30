@@ -464,6 +464,21 @@ p { margin: 0; }
 /* ============================================================
    MESSAGE / ABOUT
    ============================================================ */
+   #message {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10vh 10vw;
+
+    & .Portrait {
+      max-width: 500px;
+      margin: 30px auto;
+      border: 10px solid #fff;
+      box-shadow: 0px 30px 30px -20px var(--azure-deep);
+      overflow: hidden;
+      transform: rotate(5deg);
+    }
+   }
 .message__body p + p { margin-top: 1.1em; }
 .message__signature {
   margin-top: var(--space-3);
