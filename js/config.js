@@ -10,7 +10,7 @@
 window.CONFIG = {
   event: {
     // Name as it should appear across the site (hero, footer, page title, etc.)
-    debutanteName: "Chrizle Anne",
+    debutanteName: "Chrizle",
 
     // Small line above the main title in the hero section
     eyebrow: "A Sun-Kissed Celebration",
