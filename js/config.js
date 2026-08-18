@@ -47,7 +47,6 @@ window.CONFIG = {
     entries: {
       name: "entry.800421673",
       attending: "entry.69251982",
-      guestCount: "entry.677813252",
       message: "entry.1297571060",
     },
     // These MUST exactly match the option text in your Google Form's

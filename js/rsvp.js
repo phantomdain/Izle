@@ -46,7 +46,8 @@
         return;
       }
 
-      const guestCount = form.querySelector('[name="guestCount"]').value;
+      const guestCountField = form.querySelector('[name="guestCount"]');
+      const guestCount = guestCountField ? guestCountField.value : "";
       const message = form.querySelector('[name="guestMessage"]').value.trim();
       const attendingLabel = attending.value === "yes" ? cfg.attendingOptions.yes : cfg.attendingOptions.no;
 
