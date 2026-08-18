@@ -46,15 +46,12 @@
         return;
       }
 
-      const guestCountField = form.querySelector('[name="guestCount"]');
-      const guestCount = guestCountField ? guestCountField.value : "";
       const message = form.querySelector('[name="guestMessage"]').value.trim();
       const attendingLabel = attending.value === "yes" ? cfg.attendingOptions.yes : cfg.attendingOptions.no;
 
       const data = new FormData();
       data.append(cfg.entries.name, name);
       data.append(cfg.entries.attending, attendingLabel);
-      if (cfg.entries.guestCount) data.append(cfg.entries.guestCount, guestCount);
       if (cfg.entries.message) data.append(cfg.entries.message, message);
 
       submitBtn.disabled = true;
