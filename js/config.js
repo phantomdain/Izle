@@ -53,7 +53,7 @@ window.CONFIG = {
     // multiple-choice "Will you be attending?" question.
     attendingOptions: {
       yes: "Joyfully accepts (Yes)",
-      no: "Regretfully declines (No)",
+      no: "Regretfully decline (No)",
     },
   },
 
