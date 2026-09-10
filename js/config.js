@@ -18,7 +18,7 @@ window.CONFIG = {
     // ISO 8601 date-time WITH timezone offset — powers the countdown timer,
     // "Add to Calendar" links, and the displayed date/time.
     // Example: "2026-12-31T18:00:00+08:00"
-    dateISO: "2026-11-07T14:00:00+08:00",
+    dateISO: "2026-11-07T17:00:00+08:00",
 
     // How long the event lasts, in hours (used for calendar links)
     durationHours: 5,
