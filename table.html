@@ -34,13 +34,10 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
     </div>
     <span class="hero__eyebrow">Seating</span>
-    <h1 class="hero__title" style="font-size: clamp(2.2rem, 9vw, 3.4rem);">Find My Table</h1>
-    <p class="hero__date">Enter the name you RSVP'd with to find your seat.</p>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="finder">
+    <h1 class="hero__title"><em>Chrizle's</em> 18th</h1>
+    <!--<p class="hero__title" style="font-size: clamp(2.2rem, 9vw, 3.4rem);">Find My Table</p>-->
+    <p class="hero__date">FIND YOUR TABLE <br>Enter the name you RSVP'd with to find your seat.</p>
+    <div class="finder">
         <div class="finder__row">
           <input type="text" id="finderInput" placeholder="Type your full name…" autocomplete="name" aria-label="Your name">
           <button type="button" class="btn btn--primary" id="finderButton">Search</button>
@@ -49,8 +46,13 @@
       </div>
 
       <div class="finder-result" id="finderResult" aria-live="polite"></div>
-    </div>
   </section>
+
+  <!--<section class="section">
+    <div class="container">
+      
+    </div>
+  </section>-->
 </main>
 
 <footer class="site-footer">
@@ -59,7 +61,7 @@
   </p>
 </footer>
 
-<script src="js/config.js?v=1"></script>
+<script src="js/config.js?v=2"></script>
 <script src="js/main.js?v=1"></script>
 <script src="js/table-finder.js?v=1"></script>
 </body>
