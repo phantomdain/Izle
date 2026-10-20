@@ -169,7 +169,9 @@
         guestsPromise = Promise.resolve([]);
         return guestsPromise;
       }
-      guestsPromise = fetch(sheetCfg.csvUrl)
+      // Bust the browser's 5-minute cache so sheet edits show up sooner
+      const sep = sheetCfg.csvUrl.includes("?") ? "&" : "?";
+      guestsPromise = fetch(sheetCfg.csvUrl + sep + "_=" + Date.now(), { cache: "no-store" })
         .then((res) => {
           if (!res.ok) throw new Error("Network response was not ok");
           return res.text();
